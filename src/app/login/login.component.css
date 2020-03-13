@@ -1,0 +1,67 @@
+/* #227093 */
+.container1{
+    /* background-image: url('../../assets/food.jpg'); */
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/food-image.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.example-card {
+    width: 400px;
+    height: 225px;;
+    background: #fff;
+  }
+
+  ::placeholder {
+    color: peachpuff;
+    font-size: 13px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/OrderNow.png');
+    background-size: cover;
+    align-self: center;
+  }
+
+  .mat-card-header {
+      justify-content: space-between;
+  }
+  .mat-card-avatar {
+    height: 55px;
+    width: 200px;
+  }
+  .mat-card-content , form{
+      height: 140px;
+      display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .login-input {
+      height: 50px;
+      width: 85%;
+      font-size: 25px;
+      border-radius: unset;
+  }
+  .arrow-icon {
+    height: 50px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #227093; */
+    font-size: 35px;
+    border-radius: unset;
+  }
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #495057;
+    outline: 0;
+    box-shadow: unset;
+  }
+  button:disabled {
+      cursor: not-allowed;
+  }
