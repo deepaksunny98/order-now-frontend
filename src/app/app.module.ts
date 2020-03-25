@@ -9,16 +9,19 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MenuListComponent } from './menu-list/menu-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MenuListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
+    MatListModule,
     HttpClientModule,
     MatSidenavModule,
     MatTooltipModule
