@@ -1,23 +1,26 @@
+<div mat-subheader>Folders</div>
 <mat-list>
-  <div mat-subheader>Folders</div>
-  <div *ngFor="let rest of listRestuarent">
-    <div style="margin-top: 10px;">
-      <div>
-        <img src={{rest.img}} width="50px" height="50px">
-      </div>
-      <div style="display: flex; justify-content: space-around;">
-        <div style="display: flex; flex-direction: column; margin-left: 10px;">
-          <div>{{rest.name}}</div>
-          <div><i class="fa fa-inr" aria-hidden="true"></i>100</div>
+  <div *ngFor="let rest of listRestuarent" class="menu-card-list">
+    <div class="card-list">
+      <!-- <div class="menu-img"> -->
+        <img src={{rest.img}} width="270px" height="160px">
+      <!-- </div> -->
+      <div style="margin:12px; display: flex; justify-content: space-between; flex-direction: column;">
+        <div style="display: flex;
+        flex-direction: column;
+        justify-content: space-around;">
+          <h5>{{rest.name}}</h5>
+          <p class="card-desc ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique</p>
+          <div class="font-size"><i class="fa fa-inr" aria-hidden="true"></i>100</div>
         </div>
-        <button>add</button>
       </div>
-
-
+      <div style="    width: 8%;
+      display: flex;
+      align-items: center; font-size: 30px;"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
     </div>
-    <div style="margin-top: 10px;">
+    <!-- <div style="margin-top: 10px;">
       <mat-divider></mat-divider>
-    </div>
+    </div> -->
   </div>
   <!-- <mat-divider></mat-divider>
   <div mat-subheader>Notes</div>
