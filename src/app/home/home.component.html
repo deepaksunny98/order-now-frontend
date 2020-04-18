@@ -23,7 +23,7 @@
   </nav> -->
   <div class="list-restua">
     <div *ngFor="let rest of listRestuarent" class="card-list">
-      <div [routerLink]="['/restaurant/1']" >
+      <div [routerLink]="['/restaurant/'+rest.RestaurantId]">
         <img src={{rest.img}} width="270px" height="160px">
         <h5>{{rest.name}}</h5>
         <p class="card-desc">{{rest.variety}}</p>

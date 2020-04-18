@@ -5,17 +5,14 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class LoginService {
+export class MenuListService {
   constructor(private http: HttpClient) {}
 
-  sendOtp(data) {
-    console.log('sendOtpsendOtpsendOtp', data);
-    const url = environment.otpUrl;
-    return this.http.post(url, data).toPromise();
-  }
-  getRestaurents() {
+  getMenu(restaurantId: number) {
     return this.http
-      .get(`${environment.apiUrl}/admin/getRestaurants`)
+      .get(
+        `${environment.apiUrl}/admin/getMenubyRestaurantId?restaurantId=${restaurantId}`
+      )
       .toPromise();
   }
 }

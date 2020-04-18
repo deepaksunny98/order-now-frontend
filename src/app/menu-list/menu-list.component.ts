@@ -1,49 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
+import { MenuListService } from './menu-list.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu-list',
   templateUrl: './menu-list.component.html',
-  styleUrls: ['./menu-list.component.css']
+  styleUrls: ['./menu-list.component.css'],
 })
 export class MenuListComponent implements OnInit {
-  listRestuarent: any = [];
-  folders = [
-    {
-      name: 'Photos',
-      updated: new Date('1/1/16')
-    },
-    {
-      name: 'Recipes',
-      updated: new Date('1/17/16')
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16')
-    }
-  ];
-  notes = [
-    {
-      name: 'Vacation Itinerary',
-      updated: new Date('2/20/16')
-    },
-    {
-      name: 'Kitchen Remodel',
-      updated: new Date('1/18/16')
-    }
-  ];
+  menuItems: any[] = [];
+  noMenu = false;
 
-  constructor(private service: LoginService) {}
+  constructor(
+    private service: MenuListService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.service.getRestaurents().then(res => {
-      if (res) {
-        this.listRestuarent = res;
+    const restaurantId = Number(this.route.snapshot.paramMap.get('id'));
+    this.service.getMenu(restaurantId).then((res: any[]) => {
+      if (res.length !== 0) {
+        this.menuItems = res;
+      } else {
+        this.noMenu = true;
       }
-      this.listRestuarent = this.listRestuarent.map((data, i) => {
-        data.name = `menu ${i}`;
-        return data;
-      });
     });
   }
 }
