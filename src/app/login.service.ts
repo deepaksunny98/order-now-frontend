@@ -15,7 +15,7 @@ export class LoginService {
   }
   getRestaurents() {
     return this.http
-      .get(`${environment.apiUrl}/admin/getRestaurants`)
+      .get(`${environment.apiUrl}/customer/getRestaurants`)
       .toPromise();
   }
 }

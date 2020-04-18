@@ -1,0 +1,59 @@
+<div class="container-table">
+  <h3 style="color: #fff; padding: 1%; margin-left: 2%;">Book a Table</h3>
+  <div class="table-card">
+      <h5>1. Please select your booking details</h5>
+      <form [formGroup]="tableBookingForm" (ngSubmit)="validateBookingdata(tableBookingForm.value)">
+          <div style="display: flex; justify-content: space-evenly;padding: 2%;">
+          <!-- <mat-form-field>
+              <mat-label>SELECT A DATE</mat-label>
+              <input matInput [matDatepicker]="picker" [min]="minDate" formControlName="date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field> -->
+            <mat-form-field>
+              <mat-label>NUMBER OF GUESTS</mat-label>
+              <mat-select formControlName="people">
+                <mat-option *ngFor="let people of guests" [value]="people.number" >
+                  {{people.number}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <!-- <mat-form-field>
+              <mat-label>TIME</mat-label>
+              <mat-select formControlName="time">
+                <mat-option *ngFor="let list of timeList" [value]="list.time" >
+                  {{list.time}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field> -->
+          </div>
+          <h5>2. Enter guest details </h5>
+            <div style="display: flex; flex-direction: column; justify-content: space-evenly;padding: 2%; min-height: 30vh;">
+              <div style="display: flex; justify-content: space-evenly;">
+              <mat-form-field class="guest">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" required>
+                </mat-form-field>
+                <mat-form-field class="guest">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName" required>
+                </mat-form-field>
+              </div>
+              <div style="display: flex; justify-content: space-evenly;">
+                <!-- <mat-form-field class="guest">
+                  <mat-label>Email</mat-label>
+                  <input matInput type="email" formControlName="email" required>             
+                </mat-form-field> -->
+                <mat-form-field class="guest">
+                  <mat-label>Phone Number</mat-label>
+                  <input matInput formControlName="phoneNumber" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div style="padding: 4%; display: flex; justify-content: center;">
+            <button class="btn btn-success"  [disabled]="!tableBookingForm.valid">BOOK A TABLE</button>
+          </div>
+           
+      </form>
+  </div>
+  </div>

@@ -11,7 +11,7 @@ export class MenuListService {
   getMenu(restaurantId: number) {
     return this.http
       .get(
-        `${environment.apiUrl}/admin/getMenubyRestaurantId?restaurantId=${restaurantId}`
+        `${environment.apiUrl}/customer/getMenubyRestaurantId?restaurantId=${restaurantId}`
       )
       .toPromise();
   }

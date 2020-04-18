@@ -1,4 +1,4 @@
-<div class="container-1">
+  <div class="container-1">
   <!-- <nav class="navbar navbar-expand-md bg-light navbar-light">
     <a class="navbar-brand" href="#"><img height="100px" src="../../assets/OrderNow.png" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -22,8 +22,8 @@
     </div>
   </nav> -->
   <div class="list-restua">
-    <div *ngFor="let rest of listRestuarent" class="card-list">
-      <div [routerLink]="['/restaurant/'+rest.RestaurantId]">
+    <div *ngFor="let rest of listRestuarent" class="card-list" (click)="navigateToTableBooking(rest)">
+      <div>
         <img src={{rest.img}} width="270px" height="160px">
         <h5>{{rest.name}}</h5>
         <p class="card-desc">{{rest.variety}}</p>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuListService } from './menu-list.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-list',
@@ -13,17 +13,41 @@ export class MenuListComponent implements OnInit {
 
   constructor(
     private service: MenuListService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
     const restaurantId = Number(this.route.snapshot.paramMap.get('id'));
     this.service.getMenu(restaurantId).then((res: any[]) => {
       if (res.length !== 0) {
+        res.map(menu => {
+          menu.addtocart = 0;
+        });
         this.menuItems = res;
       } else {
         this.noMenu = true;
       }
     });
+  }
+  addItem(item) {
+    console.log('item', item);
+    this.menuItems.map(rest => {
+      if (rest.MenuId === item.MenuId) {
+        item.addtocart = (item.addtocart) ? item.addtocart + 1 : 1;
+      }
+    });
+  }
+  removeItem(item) {
+    this.menuItems.map(rest => {
+      if (rest.MenuId === item.MenuId) {
+        item.addtocart = (item.addtocart) ? item.addtocart - 1 : 0;
+      }
+    });
+  }
+  addToCart() {
+    sessionStorage.setItem('cartItems', JSON.stringify(this.menuItems));
+    this.router.navigate(['cart']);
+    console.log('list restaurents', this.menuItems);
   }
 }

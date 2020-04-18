@@ -15,13 +15,20 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MenuListComponent } from './menu-list/menu-list.component';
+import { CartComponent } from './cart/cart.component';
+import { TableComponent } from './table/table.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MenuListComponent
+    MenuListComponent,
+    CartComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,10 @@ import { MenuListComponent } from './menu-list/menu-list.component';
     MatListModule,
     HttpClientModule,
     MatSidenavModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
