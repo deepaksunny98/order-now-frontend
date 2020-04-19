@@ -30,7 +30,9 @@ export class LoginComponent implements OnInit {
   });
 
   loginData: any;
-  ngOnInit() {}
+  ngOnInit() {
+    sessionStorage.clear();
+  }
 
   login(number) {
     this.loginData = {

@@ -1,8 +1,10 @@
 .container-cart {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/brown-shopping-bags-5956.jpg');
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/brown-shopping-bags-5956.jpg'); */
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 92vh;
+    background-color:darkgrey;
+    padding-top: 15px;
     /* color: #fff; */
 }
 .cart-card{

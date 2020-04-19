@@ -14,16 +14,19 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cartItems = JSON.parse(sessionStorage.getItem('cartItems'));
-    this.cartItems.map(item => {
-      if (item.addtocart > 0) {
-        item.totalprice = item.Amount * item.addtocart;
-        this.totalPrice = this.totalPrice + item.totalprice;
-        this.addedItems.push(item);
-      } else {
-        this.noItems.push(item);
-      }
-
-    });
+    if (this.cartItems) {
+      this.cartItems.map(item => {
+        if (item.addtocart > 0) {
+          item.totalprice = item.Amount * item.addtocart;
+          this.totalPrice = this.totalPrice + item.totalprice;
+          this.addedItems.push(item);
+        } else {
+          this.noItems.push(item);
+        }
+      });
+    } else {
+      this.addedItems = [];
+    }
   }
 
 }

@@ -1,7 +1,8 @@
-
-<div *ngIf="addedItems.length === 0">
-  <h3>Your Cart is Empty</h3>
-  </div>
+<div *ngIf="addedItems.length === 0"  style="text-align: center;">
+  <span style="color: red">
+    Your Cart is Empty
+  </span>
+</div>
 <div class="container-cart" *ngIf="addedItems.length > 0">
   <div style="display: flex; justify-content: center;">
   <h3 style="color: #fff;">Your cart items</h3></div>

@@ -13,8 +13,8 @@
             <mat-form-field>
               <mat-label>NUMBER OF GUESTS</mat-label>
               <mat-select formControlName="people">
-                <mat-option *ngFor="let people of guests" [value]="people.number" >
-                  {{people.number}}
+                <mat-option *ngFor="let people of guests" [value]="people" >
+                  {{people}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
