@@ -8,7 +8,7 @@
   <h3 style="color: #fff;">Your cart items</h3></div>
   <div style="    display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  min-height: 60vh;
 ">
   <div *ngFor="let items of addedItems" class="cart-card">
     <div style="display: flex;">
@@ -26,12 +26,15 @@
     </div>
   </div>
   </div>
-  <div>
-    <h3 style="color:crimson">Total Price = <i class="fa fa-inr" aria-hidden="true"></i> {{totalPrice}}</h3>
-  </div>
-  <div>
-    <button class="btn btn-primary">PLACE ORDER</button>
-  </div>
 </div>
+<!-- <div style="display: flex; flex-direction: column;"> -->
+<div style="margin: auto; width: 70%; border: 1px solid #fff; margin-top: 10px;"></div>
+  <div style="display: flex; justify-content: center; padding-top: 20px;">
+    <h3 style="color: #fff;">Total Price = <i class="fa fa-inr" aria-hidden="true"></i> {{totalPrice}}</h3>
+  </div>
+  <div style="display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;">
+    <button class="btn btn-primary" (click)="placeOrder()">PLACE ORDER</button>
+  </div>
+<!-- </div> -->
 
 </div>

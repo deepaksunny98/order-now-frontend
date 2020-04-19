@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private service: LoginService, private router: Router) { }
   listRestuarent: any;
   ngOnInit() {
+    sessionStorage.setItem('LoggedIn', 'true');
     this.getAllRestaurents();
   }
 

@@ -29,4 +29,20 @@ export class CartComponent implements OnInit {
     }
   }
 
+  placeOrder() {
+    const restuarant = JSON.parse(sessionStorage.getItem('SELECTED_REST'));
+    const tableDetails = JSON.parse(sessionStorage.getItem('TABLE_BOOKING'));
+      const bookingJson = {
+        restaurantId: restuarant.RestaurantId,
+        cartItems: this.addedItems,
+        tableDetails: tableDetails,
+        firstName: tableDetails.firstName,
+        lastName: tableDetails.lastName,
+        mobileNumber: sessionStorage.getItem('mobile'),
+        userId: sessionStorage.getItem('userId')
+      };
+
+    console.log('bookingJson', bookingJson);
+  }
+
 }
