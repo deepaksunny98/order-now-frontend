@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { LoginService } from '../login.service';
+import { LoginService } from '../app.service';
 import { Router } from '@angular/router';
 import * as jwt_decode from 'jwt-decode';
 import { LoginInterface } from './login.model';

@@ -10,13 +10,10 @@ export class AppComponent implements OnInit {
   title = 'Order Now';
   login: string;
 
-  constructor(private readonly webSocketService: WebSocketService) {}
+  constructor() {}
   ngOnInit(): void {
     this.login = sessionStorage.getItem('LoggedIn');
-    this.webSocketService.listen('OrderSent').subscribe((data) => {
-      console.log('reply from socket -> ', data);
-    });
-    this.webSocketService.emit('SendOrder', {restaurantId: 'bcd', orderDetails: 'Icecream'});
+    // this.webSocketService.emit('SendOrder', {restaurantId: sessionStorage.getItem('restaurantId'), orderDetails: 'Icecream'});
   }
 }
 

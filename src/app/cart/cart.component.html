@@ -22,7 +22,7 @@
     <div style="width: 13%; display: flex; align-items: center;
     font-size: 20px;
     font-weight: bold;">
-      <p><i class="fa fa-inr" aria-hidden="true"></i> {{items.totalprice}} </p>
+      <p>${{items.totalprice}} </p>
     </div>
   </div>
   </div>
@@ -30,7 +30,7 @@
 <!-- <div style="display: flex; flex-direction: column;"> -->
 <div style="margin: auto; width: 70%; border: 1px solid #fff; margin-top: 10px;"></div>
   <div style="display: flex; justify-content: center; padding-top: 20px;">
-    <h3 style="color: #fff;">Total Price = <i class="fa fa-inr" aria-hidden="true"></i> {{totalPrice}}</h3>
+    <h3 style="color: #fff;">Total Price = ${{totalPrice}}</h3>
   </div>
   <div style="display: flex; justify-content: center; padding-top: 20px; padding-bottom: 20px;">
     <button class="btn btn-primary" (click)="placeOrder()">PLACE ORDER</button>

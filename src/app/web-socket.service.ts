@@ -10,13 +10,13 @@ export class WebSocketService {
   socket: SocketIOClient.Socket;
 
   constructor() {
-    const abc: SocketIOClient.ConnectOpts = {
-      query: {
-        Id: 'abc',
-        clientType: 'Customer'
-      },
-    };
-    this.socket = io(environment.socketUrl, abc);
+    // const abc: SocketIOClient.ConnectOpts = {
+    //   query: {
+    //     Id: `C${sessionStorage.getItem('userId')}`,
+    //     clientType: 'Customer'
+    //   },
+    // };
+    // this.socket = io(environment.socketUrl, abc);
   }
 
   listen(eventName: string) {

@@ -18,6 +18,11 @@ export class LoginService {
     const url = environment.otpUrl;
     return this.http.post(url, data).toPromise();
   }
+
+  placeOrder(bookingJson) {
+    return this.http.post(`${environment.apiUrl}/customer/booking`, bookingJson);
+  }
+
   getRestaurents() {
     return this.http
       .get(`${environment.apiUrl}/customer/getRestaurants`)

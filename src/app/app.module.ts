@@ -22,6 +22,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpInterceptProviders } from './http-interceptors';
 import { AuthGuard } from './auth.guard';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { AuthGuard } from './auth.guard';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    ToastrModule.forRoot()
   ],
   providers: [HttpInterceptProviders, AuthGuard],
   bootstrap: [AppComponent],
