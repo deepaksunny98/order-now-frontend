@@ -21,7 +21,7 @@
   }
   
   .example-header-image {
-    background-image: url('../../assets/OrderNow.png');
+    background-image: url('https://ph-test-11.slatic.net/shop/0bff87be8fe353bf22cf20c1143e6376.png');
     background-size: cover;
     align-self: center;
   }
@@ -30,8 +30,8 @@
       justify-content: space-between;
   }
   .mat-card-avatar {
-    height: 55px;
-    width: 200px;
+    height: 70px;
+    width: 170px;
   }
   .mat-card-content , form{
       height: 140px;

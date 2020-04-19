@@ -1,0 +1,23 @@
+.container-table{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/fog-foggy-forest-table-279626.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.table-card {
+    background-color: #ffffff;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;;
+    box-shadow: 1px 1px 1px 1px darkgrey;
+}
+h5{
+    margin-left: 4%;
+    padding-top: 2%;
+}
+mat-form-field {
+    font-size: 14px;
+}
+.guest {
+    width: 40%;
+}

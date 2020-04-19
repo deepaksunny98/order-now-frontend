@@ -1,0 +1,19 @@
+.container-cart {
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/brown-shopping-bags-5956.jpg'); */
+    background-position: center;
+    background-size: cover;
+    min-height: 92vh;
+    background-color:darkgrey;
+    padding-top: 15px;
+    /* color: #fff; */
+}
+.cart-card{
+    background-color: #ffffff;
+    width: 33%;
+    margin: 1%;
+    border-radius: 20px;;
+    box-shadow: 1px 1px 1px 1px darkgrey;
+}
+.card-desc {
+    height: 50px;
+}
